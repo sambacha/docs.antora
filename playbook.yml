@@ -1,0 +1,31 @@
+site:
+  title: ${ORG} Docs
+  url: https://docs.${ORG_URL}
+  start_page: ${GITHUB_ORG}::index.adoc
+  keys:
+    google_analytics: ''
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: components/home
+
+    - url: .
+      branches: HEAD
+      start_path: components/learn
+
+    - url: https://github.com/${GITHUB_ORG}/${GITHUB_REPO}
+      branches: docs-v*
+      start_path: docs
+
+    - url: https://github.com/${GITHUB_ORG}/${GITHUB_REPO}
+      branches: docs-v*
+      start_path: packages/cli/docs
+
+
+ui:
+  bundle:
+    url: ./ui/bundle.zip
+asciidoc:
+  attributes:
+    idprefix: ''
